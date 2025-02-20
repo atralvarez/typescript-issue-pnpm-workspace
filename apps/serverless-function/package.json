@@ -1,0 +1,19 @@
+{
+  "name": "@repo/serverless-function",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "functions-framework --target=handler",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.4.5",
+    "@repo/db": "workspace:*"
+  },
+  "devDependencies": {
+    "@repo/shared": "workspace:*",
+    "@repo/tsconfig": "workspace:*"
+  }
+}
