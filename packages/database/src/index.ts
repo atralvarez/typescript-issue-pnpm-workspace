@@ -1,7 +1,9 @@
 import { and, count, desc, eq } from "drizzle-orm";
 import { type NodePgDatabase, drizzle } from "drizzle-orm/node-postgres";
-import { Pool } from "pg";
+import * as pg from "pg";
 import * as schema from "./schema";
+
+const { Pool } = pg;
 
 /**
  * Creates an instance of the database client.
